@@ -8,3 +8,13 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      titles: [{ text: "About" }, { text: "reference API" }],
+    };
+  },
+};
+</script>
