@@ -1,6 +1,13 @@
 <template>
   <div>
     <HeaderCont />
+    <section className="cont__title">
+      <div className="container">
+        <h1 v-for="title in titles" v-bind:key="title.text">
+          {{ title.text }}
+        </h1>
+      </div>
+    </section>
     <TitleCont />
     <ContactCont />
     <FooterCont />
@@ -19,6 +26,11 @@ export default {
     TitleCont,
     FooterCont,
     ContactCont,
+  },
+  data: function () {
+    return {
+      titles: [{ text: "UNSPLASH" }, { text: "REFERENCE API" }],
+    };
   },
 };
 </script>
