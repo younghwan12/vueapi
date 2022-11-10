@@ -2,8 +2,8 @@
   <section class="cont__title">
     <div class="container">
       <h1>
-        <strong>{props.title[0]}</strong>
-        <em>{props.title[1]}</em>
+        <strong>{{ name1 }}</strong>
+        <em>{{ name2 }}</em>
       </h1>
     </div>
   </section>
@@ -11,10 +11,9 @@
 
 <script>
 export default {
-  data: function () {
-    return {
-      titles: [{ text: "About" }, { text: "reference API" }],
-    };
+  props: {
+    name1: String,
+    name2: String,
   },
 };
 </script>
