@@ -6,27 +6,25 @@
       <div class="container">
         <div class="unsplash__inner">
           <div class="unsplash__slider">
-            <div className="unsplash__inner">
-              <div class="container">
-                <h2>Unsplash Random</h2>
-                <swiper
-                  :effect="'cards'"
-                  :grabCursor="true"
-                  :modules="modules"
-                  class="mySwiper"
-                >
-                  <swiper-slide v-for="random in randoms" :key="random.id">
-                    <li>
-                      <a :href="`https://unsplash.com/photos/${random.id}`">
-                        <img
-                          :src="`${random.urls.regular}`"
-                          :alt="`${random.urls.alt_description}`"
-                        />
-                      </a>
-                    </li>
-                  </swiper-slide>
-                </swiper>
-              </div>
+            <div class="container">
+              <h2>Unsplash Random</h2>
+              <swiper
+                :effect="'cards'"
+                :grabCursor="true"
+                :modules="modules"
+                class="mySwiper"
+              >
+                <swiper-slide v-for="random in randoms" :key="random.id">
+                  <li>
+                    <a :href="`https://unsplash.com/photos/${random.id}`">
+                      <img
+                        :src="`${random.urls.regular}`"
+                        :alt="`${random.urls.alt_description}`"
+                      />
+                    </a>
+                  </li>
+                </swiper-slide>
+              </swiper>
             </div>
           </div>
           <div className="unsplash__search">
